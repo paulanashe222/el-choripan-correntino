@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Choripan Correntino - Carta Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .category-btn.active {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+        }
+        .menu-item {
+            transition: all 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="hero-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-6xl mb-4">🔥</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">El Choripan Correntino</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Para reunir personas queridas y compartir buenos momentos, Desde 1960.</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="showCategory('casa')" class="category-btn active px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gray-100 hover:bg-amber-500 hover:text-white">
+                    De la Casa
+                </button>
+                <button onclick="showCategory('sandwich')" class="category-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gray-100 hover:bg-amber-500 hover:text-white">
+                    Sándwich
+                </button>
+                <button onclick="showCategory('varios')" class="category-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gray-100 hover:bg-amber-500 hover:text-white">
+                    Varios
+                </button>
+                <button onclick="showCategory('empanadas')" class="category-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gray-100 hover:bg-amber-500 hover:text-white">
+                    Empanadas
+                </button>
+                <button onclick="showCategory('bebidas')" class="category-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gray-100 hover:bg-amber-500 hover:text-white">
+                    Bebidas
+                </button>
+                <button onclick="showCategory('cervezas')" class="category-btn px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gray-100 hover:bg-amber-500 hover:text-white">
+                    Cervezas
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- De la Casa -->
+        <div id="casa" class="category-section">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">De la Casa</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Choripan</h3>
+                        <p class="text-gray-600 mb-4">Nuestro clásico choripan con chorizo artesanal</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Morcipan</h3>
+                        <p class="text-gray-600 mb-4">Deliciosa morcilla en pan casero</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Choripan de Pollo</h3>
+                        <p class="text-gray-600 mb-4">Chorizo de pollo casero en pan fresco</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sándwich -->
+        <div id="sandwich" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Sándwich</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Milanesa de Lomito</h3>
+                        <p class="text-gray-600 mb-4">Lechuga, tomate, aderezos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$6.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Milanesa de Pollo</h3>
+                        <p class="text-gray-600 mb-4">Lechuga, tomate, aderezos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$6.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hamburguesas</h3>
+                        <p class="text-gray-600 mb-4">Lechuga, tomate, huevo, jamón, queso, ají, aderezos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$6.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Figazzas</h3>
+                        <p class="text-gray-600 mb-4">Todo doble: lechuga, tomate, huevo, jamón, queso, ají, aderezos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$18.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Lomitos</h3>
+                        <p class="text-gray-600 mb-4">Lechuga, tomate, huevo, jamón, queso, ají, aderezos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$8.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Varios -->
+        <div id="varios" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Varios</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Carlitos</h3>
+                        <p class="text-gray-600 mb-4">Nuestro especial Carlitos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$4.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Papas Fritas</h3>
+                        <p class="text-gray-600 mb-4">Papas fritas caseras crujientes</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Super Pancho</h3>
+                        <p class="text-gray-600 mb-4">Pancho súper completo</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empanadas -->
+        <div id="empanadas" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Empanadas</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Carne / Pollo / Choclo</h3>
+                        <p class="text-gray-600 mb-4">Por docena</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$13.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Queso y Cebolla / Pescado</h3>
+                        <p class="text-gray-600 mb-4">Por docena</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$13.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Jamón y Queso</h3>
+                        <p class="text-gray-600 mb-4">Por docena</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$13.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Carne Cortada a Cuchillo</h3>
+                        <p class="text-gray-600 mb-4">Por docena</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$13.500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bebidas -->
+        <div id="bebidas" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Bebidas</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Gaseosas 1L</h3>
+                        <p class="text-gray-600 mb-4">Coca Cola, Sprite, Fanta</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$4.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Gaseosas 1.5L</h3>
+                        <p class="text-gray-600 mb-4">Coca Cola, Sprite, Fanta</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$4.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Gaseosas / Agua / Soda 500ml</h3>
+                        <p class="text-gray-600 mb-4">Variedad de bebidas</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$2.500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Aguas Saborizadas</h3>
+                        <p class="text-gray-600 mb-4">Diferentes sabores</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$2.500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cervezas -->
+        <div id="cervezas" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Cervezas</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Quilmes - Brahma 1L</h3>
+                        <p class="text-gray-600 mb-4">Cerveza nacional en botella</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$6.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Quilmes - Brahma 500ml</h3>
+                        <p class="text-gray-600 mb-4">Cerveza nacional en botella</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Stella - Heineken 1L</h3>
+                        <p class="text-gray-600 mb-4">Cerveza premium en botella</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$8.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Lata Heineken</h3>
+                        <p class="text-gray-600 mb-4">Cerveza premium en lata</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$4.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vino Cordero con Piel de Lobo</h3>
+                        <p class="text-gray-600 mb-4">Malbec - Botella</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$8.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hero-bg text-white py-12 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-4xl mb-4">📍</div>
+            <h3 class="text-2xl font-bold mb-4">¡Visitanos!</h3>
+            <p class="text-gray-300 mb-2">📍 11 de mayo 737</p>
+            <p class="text-gray-300 mb-2">📞 3794 932325</p>
+            <p class="text-gray-300 mb-2">🕒 Martes a Domingos: 20:00hs a 01:00hs</p>
+            <p class="text-gray-300 mb-6">📱 Instagram: @Elchoripancorrentino</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-green-600 hover:bg-green-700 px-8 py-3 rounded-full font-medium transition-colors duration-300">
+                    📱 WhatsApp: Hacer Pedido
+                </button>
+                <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-medium transition-colors duration-300">
+                    🚚 Delivery Disponible
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showCategory(categoryId) {
+            // Hide all categories
+            const categories = document.querySelectorAll('.category-section');
+            categories.forEach(category => {
+                category.classList.add('hidden');
+            });
+            
+            // Show selected category
+            document.getElementById(categoryId).classList.remove('hidden');
+            
+            // Update button states
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Add smooth scrolling when category changes
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('main').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'980532e9306d988b',t:'MTc1ODA3NjQwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
